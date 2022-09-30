@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@<%= user %> - Recent Tweets</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/reset.css">
+</head>
+<body>
+    <%- include('./partials/navbar'); -%>
+    <section class="tweets">
+        <% if (profile) { %>
+            <h1>@<%= user %> Tweets</h1>
+            <% for(tweet of profile) { %>
+                <div class="container-tweets">
+                    <div class="tweet-list">
+                        <a class="user" href="https://www.twitter.com/<%= user %>/" target="_blank"><%= user %></a>
+                        <a class="tweet" href="https://www.twitter.com/<%= user %>/status/<%= tweet['id'] %>" target="_blank"><%= tweet['text'] %></a>
+                    </div>
+                </div>
+            <% } %>
+        <% } else { %>
+            <h1>Tweets not found</h1>
+        <% } %>
+    </section>
+
+    <%- include('./partials/footer'); -%>
+</body>
+</html>

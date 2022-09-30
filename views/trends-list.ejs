@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Twitter Trending</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/reset.css">
+</head>
+<body>
+    <%- include('./partials/navbar'); -%>
+    <section class="country-list">
+        <h1>Top Trends List</h1>
+        <div class="container-countries">
+            <%for (let i = 0; i < list.length; i++) {%>
+                <a class="item" href="/trending/<%=list[i]['parentid']%>" target="_blank"><%=list[i]["country"]%></a>
+            <%}%>
+        </div>
+    </section>
+    <%- include('./partials/footer'); -%>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search User Tweets</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/reset.css">
+</head>
+<body>
+    <%- include('./partials/navbar'); -%>
+    <div class="container-search-user">
+        <h1>Search User Tweets</h1>
+        <div class="box">
+            <form action="/profile" method="post">
+                <input type="text" name="user" class="search-user" placeholder="TwitterDev" required>
+                <button class="search">Search</button>
+            </form>
+        </div>
+    </div>
+    <%- include('./partials/footer'); -%>
+</body>
+</html>
