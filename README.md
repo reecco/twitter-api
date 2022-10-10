@@ -19,22 +19,7 @@ cd twitter-api
 
 Install project dependencies
 ````
-npm install express --save
-````
-````
-npm install body-parser --save
-````
-````
-npm install ejs --save
-````
-````
-npm install nodemon --save
-````
-````
-npm install twitter --save
-````
-````
-npm install dotenv --save
+npm install express body-parser ejs nodemon twitter dotenv --save
 ````
 
 Create a file .env, type in the terminal
